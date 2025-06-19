@@ -1,4 +1,4 @@
-/ Select DOM elements
+// Select DOM elements
 const form = document.getElementById("guest-form");
 const input = document.getElementById("guest-name");
 const guestList = document.getElementById("guest-list");
@@ -33,7 +33,7 @@ function addGuest(name) {
 
   // Timestamp
   const time = document.createElement("small");
-  time.textContent = (Added: ${new Date().toLocaleTimeString()});
+  time.textContent = ` (Added: ${new Date().toLocaleTimeString()})`;
   time.classList.add("timestamp");
 
   // RSVP toggle
@@ -62,4 +62,3 @@ function addGuest(name) {
   li.append(nameSpan, time, rsvpBtn, removeBtn);
   guestList.appendChild(li);
 }
-
